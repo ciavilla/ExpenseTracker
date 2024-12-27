@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Receipts{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="/">Home</a>
+            {% if user.is_authenticated %}
+                <ul>
+                    <li><a href="{% url 'category_list' %}">Expense Categories</a></li>
+                    <li><a href="{% url 'account_list' %}">Accounts</a></li>
+                    <li><a href="{% url 'create_receipt' %}">Create Receipt</a></li>
+                    <li><a href="{% url 'create_category' %}">Create Category</a></li>
+                    <li><a href="{% url 'create_account' %}">Create Account</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                </ul>
+            {% else %}
+                <a href="{% url 'signup' %}">Signup</a>
+                <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Expense Tracker App</p>
+    </footer>
+</body>
+</html>

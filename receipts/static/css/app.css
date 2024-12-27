@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Set all elements to use the Open Sans font */
+body, input, textarea, button, select {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the background color of all pages */
+html, body {
+  background-color: #F2F2F2;
+}
+
+main {
+  width: 60%;
+  margin: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 12px 12px rgba(100, 255, 100, .3);
+}
+
+/* Make the input tags look nicer */
+input {
+  height: 1.5em;
+  margin: 0;
+  padding: .25em .5em;
+}
+
+/* Make the select boxes look nicer */
+select {
+  height: 2.5em;
+}
+
+/* Make the select-multiple boxes look nicer */
+select[multiple] {
+  height: 7.5em;
+}
+
+/* Set the width on all tables */
+table {
+  width: 100%;
+}

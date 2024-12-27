@@ -1,0 +1,7 @@
+An Expense Tracker App using Django.
+Login/Signup.
+Shows list of Accounts, and expense categories.
+Forms to Create a receipt, category, or Account.
+
+Activate virtual environment: source .venv/bin/activate
+

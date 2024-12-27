@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Receipt List{% endblock %}
+
+{% block content %}
+<h1>My Receipts</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Vendor</th>
+            <th>Total</th>
+            <th>Tax</th>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Account</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for receipt in receipts %}
+        <tr>
+            <td>{{ receipt.vendor }}</td>
+            <td>{{ receipt.total }}</td>
+            <td>{{ receipt.tax }}</td>
+            <td>{{ receipt.date|date:"m/d/y" }}</td>
+            <td>{{ receipt.category.name }}</td>
+            <td>{{ receipt.account.name }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No receipts found</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
