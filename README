@@ -1,7 +1,54 @@
-An Expense Tracker App using Django.
-Login/Signup.
-Shows list of Accounts, and expense categories.
-Forms to Create a receipt, category, or Account.
+# Expense Tracker App
 
-Activate virtual environment: source .venv/bin/activate
+A simple Expense Tracker application built using Django.
+
+## Features
+- User authentication (Login/Signup)
+- View a list of accounts and expense categories
+- Forms to create:
+  - Receipts
+  - Expense categories
+  - Accounts
+
+## Setup
+
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd expensetracker
+```
+
+### 2. Create and Activate Virtual Environment
+```bash
+python -m venv .venv
+source .venv/bin/activate  # On macOS/Linux
+# .venv\Scripts\activate   # On Windows
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Apply Migrations
+```bash
+python manage.py migrate
+```
+
+### 5. Run Development Server
+```bash
+python manage.py runserver
+```
+
+## Dependencies
+These dependencies are listed in `requirements.txt`:
+```
+asgiref==3.8.1
+Django==5.1.2
+sqlparse==0.5.1
+typing_extensions==4.12.2
+```
+
+## License
+This project is open-source. Feel free to modify and improve it.
 
